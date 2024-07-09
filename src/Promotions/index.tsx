@@ -1,6 +1,7 @@
 import {useParams} from "react-router-dom";
 import {Card, CardType} from "../Card/Card.tsx";
 import {AnimatedLink} from "../AnimatedLink/AnimatedLink.tsx";
+import back from "../assets/back.svg";
 import promotion1 from "../assets/promotion1.jpg";
 import promotion2 from "../assets/promotion2.jpg";
 import promotion3 from "../assets/promotion3.jpg";
@@ -32,7 +33,12 @@ export function DetailsPage() {
     const clickedCard = cards.find((c) => c.id === cardId);
     return (
         <>
-            <AnimatedLink to="/">Back</AnimatedLink>
+            <AnimatedLink to="/">
+                <div className="flex items-center justify-start mb-2">
+                    <img src={back as string} className="w-4 h-4" alt=""/>
+                    <span>Back</span>
+                </div>
+            </AnimatedLink>
             <Card card={clickedCard as CardType} active/>
         </>
     );
