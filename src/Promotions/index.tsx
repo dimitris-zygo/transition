@@ -19,7 +19,7 @@ export function PromotionPage(){
             {cards.map((c) => (
                 <div key={c.id}>
                     <AnimatedLink to={`/details/${c.id}`}>
-                        <Card card={c as CardType} id={c.id}/>
+                        <Card card={c as CardType}/>
                     </AnimatedLink>
                 </div>
             ))}

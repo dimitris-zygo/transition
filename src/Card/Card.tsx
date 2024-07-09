@@ -8,12 +8,12 @@ export type CardType = {
     title: string
 }
 
-export function Card({card,id,active=false}:{card:CardType,id?:string,active?:boolean}){
+export function Card({card,active=false}:{card:CardType,active?:boolean}){
     return (
         <div className={classNames("text-white rounded-lg bg-gray-700",{
             "w-96 cursor-default":active,
             "w-60 cursor-pointer":!active
-        })} style={{viewTransitionName: `image-${id}`}}>
+        })} style={{viewTransitionName: `image-${card.id}`}}>
             <img src={card.image} alt={card.image} className={classNames("rounded-lg")}/>
             {active && (
                 <div className="py-6 px-2 space-y-4">
