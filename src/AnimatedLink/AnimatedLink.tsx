@@ -9,7 +9,6 @@ function isViewTransitionSupported(){
 export const AnimatedLink = ({ to, children }) => {
     const navigate = useNavigate();
 
-    console.log(isViewTransitionSupported());
     return (
         <Link
             to={to}
